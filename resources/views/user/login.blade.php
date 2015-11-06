@@ -27,6 +27,9 @@
       </div>
 
         {!! \Form::open(['url'=>url('login')]) !!}
+        @if(\Session::has('failure'))
+        <div class="alert alert-danger">{{\Session::get('failure')}}</div>
+        @endif
         {!! \Form::input('text',"email", "",['placeholder'=>"Enter Email"],'Email') !!}
         {!! \Form::input('password',"password", "",['placeholder'=>"Enter Password"],'Password') !!}
         {!! \Form::submit('Login', array('class' => 'btn btn-primary')) !!}

@@ -52,7 +52,17 @@ class UserController extends Controller
             }
             else
             {
-                return "sss";
+                try
+                {
+                    return $this->user_service->authenticate_email_user($user['email'], $user['password']);
+
+                } catch (\App\Core\User\Application\Exceptions\UserPasswordIncorrectException $ex) {
+
+                    return \Redirect::to('/login')
+                    ->withInput()
+                    ->with('failure',$ex->getMessage());
+
+                }
             }
     }
 
@@ -111,7 +121,6 @@ class UserController extends Controller
     public function login_google_callback()
     {
         $user = \Socialize::with('google')->user();
-        //dd($user);
         return $this->user_service->authenticate_google_user($user);
     }
     

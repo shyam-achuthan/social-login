@@ -20,7 +20,21 @@ class User
 
     function register_user($user_data)
     {
-        dd($user_data);
+
+
+        $app_user = UserModel::create();
+        $app_user->name = $user_data['fullname'];
+        $app_user->email = strtolower($user_data['email']);
+        $app_user->password = \Hash::make($user_data['password']);
+
+        $app_user->save();
+
+        $this->authenticate($app_user);
+
+        return redirect('/dashboard');
+
+
+
     }
 
     function authenticate_google_user($social_user)
@@ -72,6 +86,20 @@ class User
     function get_user_by_email($email)
     {
         return UserModel::get_user_by_email($email);
+    }
+
+
+    function authenticate_email_user($email,$password)
+    {
+        if(\Auth::attempt(['email' => $email, 'password' => $password]))
+        {
+             $this->authenticate(\Auth::user());
+            return redirect('/dashboard');
+        }
+        else
+        {
+            throw new \App\Core\User\Application\Exceptions\UserPasswordIncorrectException("Invalid Username/Password");
+        }
     }
 
     function authenticate($app_user)
