@@ -27,24 +27,14 @@
         <span class="span-or">or</span>
       </div>
 
-      <form role="form">
-        <div class="form-group">
-          <label for="inputUsernameEmail">Name</label>
-          <input type="text" class="form-control" id="inputUsernameEmail">
-        </div>
-        <div class="form-group">
-          <label for="inputUsernameEmail">Email</label>
-          <input type="text" class="form-control" id="inputUsernameEmail">
-        </div>
-        <div class="form-group">
-          <label for="inputPassword">Password</label>
-          <input type="password" class="form-control" id="inputPassword">
-        </div>
-         
-        <button type="submit" class="btn btn btn-primary">
-          Log In
-        </button>
-      </form>
+
+        {!! \Form::open() !!}
+        {!! \Form::input('text',"fullname", "",['placeholder'=>"Enter Fullname"],'Name') !!}
+        {!! \Form::input('text',"email", "",['placeholder'=>"Enter Email"],'Email') !!}
+        {!! \Form::input('password',"password", "",['placeholder'=>"Enter Password"],'Password') !!}
+        {!! Form::submit('Register', array('class' => 'btn btn-primary')) !!}
+        {!! \Form::close() !!}
+
 
     </div>
 

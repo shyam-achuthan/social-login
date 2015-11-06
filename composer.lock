@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c6026b96e6fa11a641b51a6ba976f5e",
-    "content-hash": "5bd58fd976f1ee3e9611bc37c006ec46",
+    "hash": "7b94277d7c599b4ae901ac8fe5246e75",
+    "content-hash": "e77d58a09d07b052b51a38692fc7e5bd",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -216,6 +216,52 @@
                 "string"
             ],
             "time": "2014-12-20 21:24:13"
+        },
+        {
+            "name": "illuminate/html",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/html.git",
+                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/html/zipball/3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
+                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~5.0",
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Html\\": ""
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "time": "2015-01-01 16:31:18"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -942,6 +988,42 @@
                 "shell"
             ],
             "time": "2015-07-16 15:26:57"
+        },
+        {
+            "name": "shyam-achuthan/laravel5bootstrap3form",
+            "version": "V1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shyam-achuthan/laravel5bootstrap3form.git",
+                "reference": "6b40ecf57a7d451c347326205d3d919ab2e85809"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shyam-achuthan/laravel5bootstrap3form/zipball/6b40ecf57a7d451c347326205d3d919ab2e85809",
+                "reference": "6b40ecf57a7d451c347326205d3d919ab2e85809",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/html": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ShyamAchuthan\\Laravel5Bootstrap3Form\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shyam Achuthan",
+                    "email": "shyam@shyamachuthan.com"
+                }
+            ],
+            "description": "Form builder for Laravel5 based on bootstrap3 form group / controls",
+            "time": "2015-09-02 12:03:13"
         },
         {
             "name": "swiftmailer/swiftmailer",
