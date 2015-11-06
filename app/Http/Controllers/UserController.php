@@ -54,7 +54,7 @@ class UserController extends Controller
             {
                 try
                 {
-                    return $this->user_service->authenticate_email_user($user['email'], $user['password']);
+                    return $this->user_service->authenticate_email_user(strtolower($user['email']), $user['password']);
 
                 } catch (\App\Core\User\Application\Exceptions\UserPasswordIncorrectException $ex) {
 
