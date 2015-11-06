@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Core\User\Model;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -36,4 +36,15 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+
+    public static function get_user_by_email($email)
+    {
+        $user = self::where('email', $email)->first();
+        if ($user) {
+            return $user;
+        } else {
+            return FALSE;
+        }
+    }
 }

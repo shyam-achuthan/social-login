@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => env('url','http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -146,6 +146,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         \ShyamAchuthan\Laravel5Bootstrap3Form\Providers\HtmlServiceProvider::class,
+        \Laravel\Socialite\SocialiteServiceProvider::class
 
     ],
 
@@ -174,7 +175,6 @@ return [
         'DB'        => Illuminate\Support\Facades\DB::class,
         'Eloquent'  => Illuminate\Database\Eloquent\Model::class,
         'Event'     => Illuminate\Support\Facades\Event::class,
-        'Form' => ShyamAchuthan\Laravel5Bootstrap3Form\Html\FormFacade::class,
         'File'      => Illuminate\Support\Facades\File::class,
         'Gate'      => Illuminate\Support\Facades\Gate::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
@@ -197,6 +197,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
+
+        'Form' => ShyamAchuthan\Laravel5Bootstrap3Form\Html\FormFacade::class,
+        'Socialize' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

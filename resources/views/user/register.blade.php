@@ -32,7 +32,8 @@
         {!! \Form::input('text',"fullname", "",['placeholder'=>"Enter Fullname"],'Name') !!}
         {!! \Form::input('text',"email", "",['placeholder'=>"Enter Email"],'Email') !!}
         {!! \Form::input('password',"password", "",['placeholder'=>"Enter Password"],'Password') !!}
-        {!! Form::submit('Register', array('class' => 'btn btn-primary')) !!}
+        {!! \Form::input('password',"cpassword", "",['placeholder'=>"Confirm Password"],'Confirm Password') !!}
+        {!! \Form::submit('Register', array('class' => 'btn btn-primary')) !!}
         {!! \Form::close() !!}
 
 

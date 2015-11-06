@@ -26,10 +26,10 @@
         <span class="span-or">or</span>
       </div>
 
-        {!! \Form::open() !!}
+        {!! \Form::open(['url'=>url('login')]) !!}
         {!! \Form::input('text',"email", "",['placeholder'=>"Enter Email"],'Email') !!}
         {!! \Form::input('password',"password", "",['placeholder'=>"Enter Password"],'Password') !!}
-        {!! Form::submit('Login', array('class' => 'btn btn-primary')) !!}
+        {!! \Form::submit('Login', array('class' => 'btn btn-primary')) !!}
         {!! \Form::close() !!}
      
 
